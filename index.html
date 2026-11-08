@@ -1,12 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetCuida</title>
+    <title>Salud y Paseo de Mascotas</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fuente moderna Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+    <!-- Checkbox para controlar la apertura del modal de la encuesta sin JS -->
+    <input type="checkbox" id="modal-survey-toggle" class="modal-toggle">
+
+    <!-- Encabezado / Navegación -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-paw"></i> Salud y Paseo
+            </a>
+            <nav class="nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Nosotros</a>
+                <label for="modal-survey-toggle" class="nav-btn-encuesta">Encuesta</label>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero / Bienvenida -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>El cuidado y la felicidad que tu mascota merece</h1>
+            <p>Paseos recreativos, ejercicio diario y la mejor atención integral para tus peludos.</p>
+            <div class="hero-actions">
+                <a href="https://wa.me/573209469214?text=¡Hola!%20Me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Salud%20y%20Paseo%20de%20Mascotas." class="btn-primary" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Agendar Paseo
+                </a>
+                <label for="modal-survey-toggle" class="btn-secondary">
+                    <i class="fa-solid fa-clipboard-list"></i> Realizar Encuesta
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios con Tarjetas Giratorias (Flip 180°) -->
+    <section id="servicios" class="services">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <p class="section-subtitle">Pasa el cursor o interactúa con el botón para descubrir más detalles.</p>
+        
+        <div class="services-grid">
+            
+            <!-- Tarjeta 1: Paseos Recreativos -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <!-- Frente -->
+                    <div class="flip-card-front card-bg-1">
+                        <div class="card-overlay"></div>
+                        <div class="card-front-content">
+                            <div class="icon-box"><i class="fa-solid fa-dog"></i></div>
+                            <h3>Paseos Recreativos</h3>
+                            <button type="button" class="btn-flip">Ver Detalles <i class="fa-solid fa-rotate"></i></button>
+                        </div>
+                    </div>
+                    <!-- Reverso -->
+                    <div class="flip-card-back card-bg-1">
+                        <div class="card-overlay-dark"></div>
+                        <div class="card-back-content">
+                            <h3>Paseos Recreativos</h3>
+                            <p>Rutas seguras y divertidas donde tu perro podrá ejercitarse, explorar y liberar energía socializando con otros peludos bajo estricta supervisión.</p>
+                            <a href="https://wa.me/573209469214?text=¡Hola!%20Quiero%20más%20información%20sobre%20Paseos%20Recreativos." class="btn-primary-sm" target="_blank">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Cuidado e Higiene -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <!-- Frente -->
+                    <div class="flip-card-front card-bg-2">
+                        <div class="card-overlay"></div>
+                        <div class="card-front-content">
+                            <div class="icon-box"><i class="fa-solid fa-heart-pulse"></i></div>
+                            <h3>Cuidado e Higiene</h3>
+                            <button type="button" class="btn-flip">Ver Detalles <i class="fa-solid fa-rotate"></i></button>
+                        </div>
+                    </div>
+                    <!-- Reverso -->
+                    <div class="flip-card-back card-bg-2">
+                        <div class="card-overlay-dark"></div>
+                        <div class="card-back-content">
+                            <h3>Cuidado e Higiene</h3>
+                            <p>Supervisión constante de la salud física, revisión de patas al finalizar el recorrido, hidratación continua y hábitos saludables adaptados a cada raza.</p>
+                            <a href="https://wa.me/573209469214?text=¡Hola!%20Quiero%20más%20información%20sobre%20Cuidado%20e%20Higiene." class="btn-primary-sm" target="_blank">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Entrenamiento Básico -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <!-- Frente -->
+                    <div class="flip-card-front card-bg-3">
+                        <div class="card-overlay"></div>
+                        <div class="card-front-content">
+                            <div class="icon-box"><i class="fa-solid fa-bone"></i></div>
+                            <h3>Entrenamiento Básico</h3>
+                            <button type="button" class="btn-flip">Ver Detalles <i class="fa-solid fa-rotate"></i></button>
+                        </div>
+                    </div>
+                    <!-- Reverso -->
+                    <div class="flip-card-back card-bg-3">
+                        <div class="card-overlay-dark"></div>
+                        <div class="card-back-content">
+                            <h3>Entrenamiento Básico</h3>
+                            <p>Refuerzo de conductas positivas, caminata con correa relajada sin tirones, órdenes básicas de obediencia y socialización tranquila con el entorno.</p>
+                            <a href="https://wa.me/573209469214?text=¡Hola!%20Quiero%20más%20información%20sobre%20Entrenamiento%20Básico." class="btn-primary-sm" target="_blank">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="nosotros" class="about">
+        <div class="about-content">
+            <h2>Pasión por el bienestar animal</h2>
+            <p>Nos dedicamos a mejorar la calidad de vida de las mascotas a través del movimiento, el juego y el cariño. Entendemos que son parte de tu familia y los tratamos con el mismo respeto y amor.</p>
+        </div>
+    </section>
+
+    <!-- Pie de página con frase personal de motivación -->
+    <footer id="contacto" class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class="fa-solid fa-heart"></i> Salud y Paseo de Mascotas
+            </div>
+            <div class="footer-quote">
+                "Un perro feliz es el reflejo de un hogar lleno de amor. Cuidar de su salud y darles tiempo para explorar no es un lujo, es la mejor manera de agradecerles su fidelidad incondicional."
+            </div>
+            <p class="copyright">&copy; 2026 Salud y Paseo de Mascotas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/573209469214?text=¡Hola!%20Deseo%20más%20información%20sobre%20sus%20servicios." class="whatsapp-float" target="_blank" aria-label="Contacto por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Modal de Encuesta (Visualización mediante CSS Puro) -->
+    <div class="modal-overlay">
+        <div class="modal-card">
+            <label for="modal-survey-toggle" class="modal-close">&times;</label>
+            <h2><i class="fa-solid fa-clipboard-question"></i> Encuesta de Servicio</h2>
+            <p class="modal-intro">Ayúdanos a conocer mejor a tu mascota para ofrecerle una experiencia personalizada.</p>
+            
+            <!-- Formulario conectado a tu endpoint de Formspree -->
+            <form action="https://formspree.io/f/mgaajwqo" method="POST" class="survey-form">
+                
+                <!-- Campo oculto para evitar errores internos y redirigir con éxito -->
+                <input type="hidden" name="_next" value="index.html">
+                
+                <!-- Pregunta 1 -->
+                <div class="question-group">
+                    <label class="question-title">1. ¿Qué tipo de mascota tienes?</label>
+                    <div class="options-group">
+                        <label class="option-item"><input type="checkbox" name="mascota_perro" value="Perro"> Perro</label>
+                        <label class="option-item"><input type="checkbox" name="mascota_gato" value="Gato"> Gato</label>
+                        <div class="text-input-group">
+                            <label class="option-item"><input type="checkbox" name="mascota_otra_check" value="Otra"> Otra:</label>
+                            <input type="text" name="mascota_especificar" placeholder="Especificar...">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="question-group">
+                    <label class="question-title">2. ¿Con qué frecuencia te gustaría que tu mascota recibiera nuestros servicios?</label>
+                    <div class="options-group">
+                        <label class="option-item"><input type="checkbox" name="frecuencia_1_2" value="1 a 2 veces por semana"> 1 a 2 veces por semana</label>
+                        <label class="option-item"><input type="checkbox" name="frecuencia_3_4" value="3 a 4 veces por semana"> 3 a 4 veces por semana</label>
+                        <label class="option-item"><input type="checkbox" name="frecuencia_todos" value="Todos los días"> Todos los días</label>
+                        <label class="option-item"><input type="checkbox" name="frecuencia_ocasional" value="Según necesidad ocasional"> Según necesidad ocasional</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="question-group">
+                    <label class="question-title">3. ¿Qué edad tiene tu mascota?</label>
+                    <div class="options-group">
+                        <label class="option-item"><input type="checkbox" name="edad_menos_1" value="Menos de 1 año"> Menos de 1 año</label>
+                        <label class="option-item"><input type="checkbox" name="edad_1_3" value="Entre 1 y 3 años"> Entre 1 y 3 años</label>
+                        <label class="option-item"><input type="checkbox" name="edad_4_7" value="Entre 4 y 7 años"> Entre 4 y 7 años</label>
+                        <label class="option-item"><input type="checkbox" name="edad_mas_7" value="Más de 7 años"> Más de 7 años</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="question-group">
+                    <label class="question-title">4. ¿Cómo describirías el nivel de energía de tu mascota?</label>
+                    <div class="options-group">
+                        <label class="option-item"><input type="checkbox" name="energia_bajo" value="Bajo"> Bajo</label>
+                        <label class="option-item"><input type="checkbox" name="energia_medio" value="Medio"> Medio</label>
+                        <label class="option-item"><input type="checkbox" name="energia_alto" value="Alto"> Alto</label>
+                        <label class="option-item"><input type="checkbox" name="energia_muy_alto" value="Muy alto"> Muy alto</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="question-group">
+                    <label class="question-title">5. ¿Existe alguna condición médica, necesidad especial o comportamiento que debamos conocer?</label>
+                    <div class="options-group">
+                        <label class="option-item"><input type="checkbox" name="condicion_no" value="No"> No</label>
+                        <div class="text-input-group">
+                            <label class="option-item"><input type="checkbox" name="condicion_si_check" value="Sí"> Sí:</label>
+                            <input type="text" name="condicion_especificar" placeholder="Especificar detalles...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <label for="modal-survey-toggle" class="btn-cancel">Cerrar</label>
+                    <button type="submit" class="btn-submit">Enviar Encuesta</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
